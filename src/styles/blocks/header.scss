@@ -1,15 +1,22 @@
 .header {
   box-sizing: border-box;
   height: 480px;
-  background-image: url(../images/header.png);
+  background-image: url(../images/header_on_Tablet.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   margin-bottom: 60px;
 
   @include onTablet {
-    height: 630px;
+    height: 628px;
+    background-position: center;
     margin-bottom: 120px;
+  }
+
+  @include onDesktop {
+    height: 711px;
+    background-image: url(../images/header.jpg);
+
   }
 
   &__content {
@@ -22,8 +29,12 @@
     padding-top: 29px;
 
     @include onTablet {
-      height: 630px;
+      height: 628px;
       padding-top: 36px;
+    }
+
+    @include onDesktop {
+      height: 711px;
     }
   }
 
@@ -34,7 +45,7 @@
     margin-bottom: 88px;
     text-align: center;
     letter-spacing: -1.5px;
-    color: #292929;
+    color: #ffffff;
 
     @include onTablet {
       font-size: 64px;
@@ -43,7 +54,7 @@
 
     @include onDesktop {
       font-size: 80px;
-      margin-bottom: 122px;
+      margin-bottom: 203px;
     }
   }
 }
